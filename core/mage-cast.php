@@ -29,6 +29,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 <?php
 define('MAGECAST', plugins_url('/',__FILE__));
 add_action('init', 'summon_core');
+if (!has_filter('widget_text','shortcode_unautop'))add_filter('widget_text','shortcode_unautop');
+if (!has_filter('widget_text','do_shortcode'))add_filter('widget_text','do_shortcode');
 function summon_core(){	
 	if (current_user_can('edit_theme_options')) {
 		add_action('admin_menu', 'summon_mage_dashboard');			
@@ -375,8 +377,8 @@ function fields($page='',$opt_group='') {
 			else $output .= '</div><div class="tab-pane fade" id="step-' . cog($value['name']) . '">';			
 		break;
 		case "legend":		
-				$output .= '<div class="panel panel-default"><div class="panel-heading">';
-				
+				$output .= '<div class="panel panel-default"><div class="panel-heading" style="position:relative;">';
+				$output .= isset($value['link'])?'<a style="position:absolute;right:20px;" href="'.$value['link'].'">Settings</a>':'';
 				$output .= '<legend class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#cast-'.cog($value['name']).'">'.$value['name'].'</a></legend>';	
 		break;
 		}		

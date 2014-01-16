@@ -33,11 +33,12 @@ add_filter('mage_options_dashboard','mage_maps_dashboard_update');
 function mage_maps_dashboard_update($options){
 	$options[] = array(
 		'name' => __('Mage Google Maps', 'magecast'),
-		'desc' => __('<p><strong>Current Version:</strong> 1.0.1</p>
+		'link' => get_admin_url(null, 'admin.php?page=mage_maps'),
+		'desc' => __('<p><strong>Current Version:</strong> 1.0.2</p>
 						<p><strong>Features in Future Updates:</strong></p>
 						<ul>
+						<li><span class="glyphicon glyphicon-time"></span> Localizization Compatibility</li>
 						<li><span class="glyphicon glyphicon-time"></span> Custom Marker Icon Upload & Selection</li>
-						<li><span class="glyphicon glyphicon-time"></span> Mage Google Map Widget with Unique Settings</li>
 						<li><span class="glyphicon glyphicon-time"></span> Option to Display Custom Markers based on Taxonomy</li>
 						<li><span class="glyphicon glyphicon-time"></span> Marker Windows & Display Options</li>
 						<li><span class="glyphicon glyphicon-time"></span> and Much More</li>

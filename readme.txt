@@ -4,7 +4,7 @@ Donate link:
 Tags: google, google map, map, google maps, maps, gmap, address, address map, auto marker, map query, wp map, mage
 Requires at least: 3.0.1
 Tested up to: 3.8.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,7 @@ Automatically display Google Maps with multiple location markers in your categor
 = Features Include =
 * Create Single Maps with simple address entry
 * OR make automatic map address markers from post type content
+* Display using super simple Widgets and Shortcodes
 * Simply add Map to sidebar, any post types and custom taxonomy archives
 * Auto shifts from multi-address or single-address display based placement
 * Change any default settings and behaviour simply in admin options
