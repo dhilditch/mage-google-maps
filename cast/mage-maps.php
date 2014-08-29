@@ -179,7 +179,7 @@ class Mage_Google_Maps extends WP_Widget {
         <select id="<?php echo $this->get_field_id( 'show' ); ?>" name="<?php echo $this->get_field_name( 'show' ); ?>" class="widefat" style="width:100%;">
         <?php foreach ($show_opts  as $show_opt => $sopt){ ?>
         <option value="<?php echo $show_opt; ?>" <?php if ($show_opt == $show) echo 'selected="selected"'; ?>><?php echo $sopt; ?></option>
-        <? } ?>
+        <?php } ?> 
 		</select></p>
         <p><label for="<?php echo $this->get_field_id('address'); ?>"><?php _e('Address:'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('address'); ?>" name="<?php echo $this->get_field_name('address'); ?>" type="text" value="<?php echo $address; ?>" /><br /><small><?php _e('Leave Blank for Auto-Display'); ?></small></p>
