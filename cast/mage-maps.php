@@ -265,7 +265,10 @@ function mage_map( $atts, $content = null ) {
       					map.addMarker({
         					lat: latlng.lat(),
         					lng: latlng.lng(),
-						title: \''.$title.'\',
+						title: '. json_encode($title) . ',
+						click: function(e) {
+							window.location.href = "' . get_permalink($id) . '";
+						},
 						'.$mark.'
       				});	  
 	  			'.$fit.'
