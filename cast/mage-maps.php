@@ -97,7 +97,7 @@ class Mage_Google_Maps extends WP_Widget {
 				}
 				$add = !empty($add)? $add : mage_get_option('maps','mage_maps_region');
 				$maps .= 'GMaps.geocode({
-  					address: \''.$add.'\',
+  					address: ' . json_encode($add) .',
   					callback: function(results, status) {
    						if (status == \'OK\') {
       						var latlng = results[0].geometry.location;
@@ -105,7 +105,7 @@ class Mage_Google_Maps extends WP_Widget {
       						map.addMarker({
         						lat: latlng.lat(),
         						lng: latlng.lng(),
-							title: \''.$title.'\',
+							title: ' . json_encode($title) . ',
 							'.$mark.'
       					});	  
 	  				'.$fit.'
